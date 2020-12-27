@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	"jedr.github.io/lamp"
 )
@@ -10,7 +11,13 @@ import (
 func main() {
 	log.SetPrefix("lamper: ")
 
-	output, err := lamp.LightUp("")
+	var color string
+	if len(os.Args) > 1 {
+		color = os.Args[1]
+	}
+	log.Printf("color: '%v'", color)
+
+	output, err := lamp.LightUp(color)
 	if err != nil {
 		log.Fatal(err)
 	}
