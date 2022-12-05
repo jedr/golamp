@@ -25,3 +25,19 @@ Current time: '2022-12-05 11:42:12.561299287 +0000 UTC'
 $ wasmtime run ./main.wasi
 Current time: '2022-12-05 11:42:29.266650976 +0000 UTC'
 ```
+
+## Run with Docker
+
+Read the docs here: https://docs.docker.com/desktop/wasm/.
+
+Prerequisites:
+
+- Docker Desktop v4.15 or higher
+
+After building the WASM module `main.wasi` with TinyGo following the steps above,
+build and run the Docker image:
+
+```sh
+docker buildx build --load --platform=wasi/wasm32 -t jedr/gowasm-wasi .
+docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 jedr/gowasm-wasi
+```
