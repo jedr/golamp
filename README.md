@@ -1,9 +1,5 @@
 # golamp
 
-My learning exercise in Go
+My learning exercises in Go
 
-## Running
-
-```shell
-go run lamp.go
-```
+- [lamper](./lamper/)
