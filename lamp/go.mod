@@ -1,3 +1,3 @@
-module jedr.github.io/lamp
+module github.com/jedr/golamp/lamp
 
-go 1.15
+go 1.19
