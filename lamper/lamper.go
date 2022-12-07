@@ -21,6 +21,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println(output)
 
+	output, err = lamp.LightDown(color)
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(output)
 }
