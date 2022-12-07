@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"jedr.github.io/lamp"
+	"github.com/jedr/golamp/lamp"
 )
 
 func main() {

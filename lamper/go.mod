@@ -1,7 +1,5 @@
 module lamper
 
-go 1.15
+go 1.19
 
-replace jedr.github.io/lamp => ../lamp
-
-require jedr.github.io/lamp v0.0.0-00010101000000-000000000000
+require github.com/jedr/golamp/lamp v0.0.0-20221207074332-52fbc14cff57
